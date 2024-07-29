@@ -1,0 +1,10 @@
+id: muriloalmeida
+name: muriloalmeida.dev
+subdomains:
+  - name: api
+  - name: resume
+dns_records:
+  - id: github_verification
+    type: TXT
+    name: _github-pages-challenge-meowzhin
+    value: c36dfa03f29437d78828f3c84169b3

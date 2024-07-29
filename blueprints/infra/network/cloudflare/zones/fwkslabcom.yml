@@ -1,0 +1,21 @@
+id: fwkslab
+name: fwkslab.com
+plan: free
+subdomains:
+  - name: api
+  # core apps #
+  - name: pihole
+  - name: vault
+  # apps #
+  - name: vaultwarden
+  - name: qbittorrent
+  - name: jdownloader2
+dns_records:
+  - id: domain_verification
+    type: TXT
+    name: "@"
+    value: sl-verification=tilsnsdmiylcbvzabzcpybgbsctbix
+  - id: github_verification
+    type: TXT
+    name: _github-pages-challenge-meowzhin
+    value: 8107c8ea16f1cf644b04df06129519
