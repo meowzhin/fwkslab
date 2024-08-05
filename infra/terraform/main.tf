@@ -11,7 +11,7 @@ provider "vault" {
 }
 
 data "vault_generic_secret" "cloudflare" {
-  path = var.vault.cloudflare_keys
+  path = "production/infra/network/cloudflare"
 }
 
 locals {
@@ -20,7 +20,7 @@ locals {
     zones = {
       fwkslabcom        = yamldecode(file("${local.root}/zones/fwkslabcom.yml"))
       muriloalmeidadev  = yamldecode(file("${local.root}/zones/muriloalmeidadev.yml"))
-      mlerouxcc  = yamldecode(file("${local.root}/zones/mlerouxcc.yml"))
+      mlerouxcc         = yamldecode(file("${local.root}/zones/mlerouxcc.yml"))
     }
     cloudflare = {
       account_id        = data.vault_generic_secret.cloudflare.data["account_id"]
